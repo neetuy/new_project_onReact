@@ -10,22 +10,22 @@ class JavascriptPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: 'a',
+      index: 0,
     };
+    this.handleChange = this.handleChange.bind();
   }
 
-  handleChange(value){
-    this.setState({
-      value: value,
-    });
-  };
+  
 
+   handleChange(event, index){
+    this.setState({ index });
+  }
 
   render() {
     return (  
       <JavascriptForm 
         handleChange={this.handleChange}
-        value={this.state.value}
+        index={this.state.index}
       />
   );
   }
