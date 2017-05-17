@@ -9,15 +9,25 @@ class RubyPage extends React.Component {
    */
   constructor(props) {
     super(props);
-
     this.state = {
-     
+      value: 'a',
     };
   }
 
+  handleChange(value){
+    this.setState({
+      value: value,
+    });
+  };
+
 
   render() {
-    return (<RubyForm />);
+    return (  
+      <RubyForm 
+        handleChange={this.handleChange}
+        value={this.state.value}
+      />
+  );
   }
 
 }

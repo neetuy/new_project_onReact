@@ -35567,11 +35567,11 @@
 
 	var _JavascriptPage2 = _interopRequireDefault(_JavascriptPage);
 
-	var _RubyPage = __webpack_require__(491);
+	var _RubyPage = __webpack_require__(497);
 
 	var _RubyPage2 = _interopRequireDefault(_RubyPage);
 
-	var _ReactPage = __webpack_require__(493);
+	var _ReactPage = __webpack_require__(499);
 
 	var _ReactPage2 = _interopRequireDefault(_ReactPage);
 
@@ -47385,7 +47385,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _JavascriptForm = __webpack_require__(495);
+	var _JavascriptForm = __webpack_require__(491);
 
 	var _JavascriptForm2 = _interopRequireDefault(_JavascriptForm);
 
@@ -47445,61 +47445,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _RubyForm = __webpack_require__(492);
-
-	var _RubyForm2 = _interopRequireDefault(_RubyForm);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var RubyPage = function (_React$Component) {
-	  _inherits(RubyPage, _React$Component);
-
-	  /**
-	   * Class constructor.
-	   */
-	  function RubyPage(props) {
-	    _classCallCheck(this, RubyPage);
-
-	    var _this = _possibleConstructorReturn(this, (RubyPage.__proto__ || Object.getPrototypeOf(RubyPage)).call(this, props));
-
-	    _this.state = {};
-	    return _this;
-	  }
-
-	  _createClass(RubyPage, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(_RubyForm2.default, null);
-	    }
-	  }]);
-
-	  return RubyPage;
-	}(_react2.default.Component);
-
-	exports.default = RubyPage;
-
-/***/ }),
-/* 492 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
+	exports.Colors = undefined;
 
 	var _react = __webpack_require__(1);
 
@@ -47507,127 +47453,18 @@
 
 	var _Card = __webpack_require__(478);
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	var _Tabs = __webpack_require__(492);
 
-	var styles = {
-	  cardWidth: {
-	    width: "100%"
-	  }
-
-	};
-
-	var RubyForm = function RubyForm() {
-	  return _react2.default.createElement(_Card.Card, { className: 'container', style: styles.cardWidth });
-	};
-
-	exports.default = RubyForm;
-
-/***/ }),
-/* 493 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _ReactForm = __webpack_require__(494);
-
-	var _ReactForm2 = _interopRequireDefault(_ReactForm);
+	var _colors = __webpack_require__(247);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var ReactPage = function (_React$Component) {
-	  _inherits(ReactPage, _React$Component);
-
-	  /**
-	   * Class constructor.
-	   */
-	  function ReactPage(props) {
-	    _classCallCheck(this, ReactPage);
-
-	    var _this = _possibleConstructorReturn(this, (ReactPage.__proto__ || Object.getPrototypeOf(ReactPage)).call(this, props));
-
-	    _this.state = {};
-	    return _this;
-	  }
-
-	  _createClass(ReactPage, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(_ReactForm2.default, null);
-	    }
-	  }]);
-
-	  return ReactPage;
-	}(_react2.default.Component);
-
-	exports.default = ReactPage;
-
-/***/ }),
-/* 494 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _Card = __webpack_require__(478);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var styles = {
-	  cardWidth: {
-	    width: "100%"
-	  }
-
+	var Colors = exports.Colors = {
+	  blue: '#034FC6',
+	  white: '#fff',
+	  grey: '#2A2F33',
+	  greyLight: '#45505a'
 	};
-
-	var ReactForm = function ReactForm() {
-	  return _react2.default.createElement(_Card.Card, { className: 'container', style: styles.cardWidth });
-	};
-
-	exports.default = ReactForm;
-
-/***/ }),
-/* 495 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _Card = __webpack_require__(478);
-
-	var _Tabs = __webpack_require__(496);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 	var styles = {
 	  cardWidth: {
 	    width: "100%"
@@ -47636,6 +47473,11 @@
 	    fontSize: 24,
 	    paddingTop: 16,
 	    marginBottom: 12,
+	    fontWeight: 400
+	  },
+	  default_tab: {
+	    color: Colors.blue,
+	    backgroundColor: Colors.white,
 	    fontWeight: 400
 	  }
 
@@ -47650,7 +47492,7 @@
 	      null,
 	      _react2.default.createElement(
 	        _Tabs.Tab,
-	        { label: 'Tab A', value: 'a' },
+	        { label: 'Tab A', value: 'a', style: styles.default_tab },
 	        _react2.default.createElement(
 	          'div',
 	          null,
@@ -47668,7 +47510,7 @@
 	      ),
 	      _react2.default.createElement(
 	        _Tabs.Tab,
-	        { label: 'Tab B', value: 'b' },
+	        { label: 'Tab B', value: 'b', style: styles.default_tab },
 	        _react2.default.createElement(
 	          'div',
 	          null,
@@ -47690,13 +47532,13 @@
 
 	JavascriptForm.propTypes = {
 	  handleChange: _react.PropTypes.func.isRequired,
-	  value: _react.PropTypes.object.isRequired
+	  value: _react.PropTypes.string.isRequired
 
 	};
 	exports.default = JavascriptForm;
 
 /***/ }),
-/* 496 */
+/* 492 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47706,11 +47548,11 @@
 	});
 	exports.default = exports.Tabs = exports.Tab = undefined;
 
-	var _Tab2 = __webpack_require__(497);
+	var _Tab2 = __webpack_require__(493);
 
 	var _Tab3 = _interopRequireDefault(_Tab2);
 
-	var _Tabs2 = __webpack_require__(498);
+	var _Tabs2 = __webpack_require__(494);
 
 	var _Tabs3 = _interopRequireDefault(_Tabs2);
 
@@ -47721,7 +47563,7 @@
 	exports.default = _Tabs3.default;
 
 /***/ }),
-/* 497 */
+/* 493 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -47938,7 +47780,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 498 */
+/* 494 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -47987,11 +47829,11 @@
 
 	var _warning2 = _interopRequireDefault(_warning);
 
-	var _TabTemplate = __webpack_require__(499);
+	var _TabTemplate = __webpack_require__(495);
 
 	var _TabTemplate2 = _interopRequireDefault(_TabTemplate);
 
-	var _InkBar = __webpack_require__(500);
+	var _InkBar = __webpack_require__(496);
 
 	var _InkBar2 = _interopRequireDefault(_InkBar);
 
@@ -48259,7 +48101,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 499 */
+/* 495 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -48312,7 +48154,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 500 */
+/* 496 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -48410,6 +48252,346 @@
 	} : void 0;
 	exports.default = InkBar;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
+
+/***/ }),
+/* 497 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _RubyForm = __webpack_require__(498);
+
+	var _RubyForm2 = _interopRequireDefault(_RubyForm);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var RubyPage = function (_React$Component) {
+	  _inherits(RubyPage, _React$Component);
+
+	  /**
+	   * Class constructor.
+	   */
+	  function RubyPage(props) {
+	    _classCallCheck(this, RubyPage);
+
+	    var _this = _possibleConstructorReturn(this, (RubyPage.__proto__ || Object.getPrototypeOf(RubyPage)).call(this, props));
+
+	    _this.state = {
+	      value: 'a'
+	    };
+	    return _this;
+	  }
+
+	  _createClass(RubyPage, [{
+	    key: 'handleChange',
+	    value: function handleChange(value) {
+	      this.setState({
+	        value: value
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(_RubyForm2.default, {
+	        handleChange: this.handleChange,
+	        value: this.state.value
+	      });
+	    }
+	  }]);
+
+	  return RubyPage;
+	}(_react2.default.Component);
+
+	exports.default = RubyPage;
+
+/***/ }),
+/* 498 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.Colors = undefined;
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Card = __webpack_require__(478);
+
+	var _Tabs = __webpack_require__(492);
+
+	var _colors = __webpack_require__(247);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Colors = exports.Colors = {
+	  blue: '#034FC6',
+	  white: '#fff',
+	  grey: '#2A2F33',
+	  greyLight: '#45505a'
+	};
+	var styles = {
+	  cardWidth: {
+	    width: "100%"
+	  },
+	  headline: {
+	    fontSize: 24,
+	    paddingTop: 16,
+	    marginBottom: 12,
+	    fontWeight: 400
+	  },
+	  default_tab: {
+	    color: Colors.blue,
+	    backgroundColor: Colors.white,
+	    fontWeight: 400
+	  }
+
+	};
+
+	var RubyForm = function RubyForm(handleChange, value) {
+	  return _react2.default.createElement(
+	    _Card.Card,
+	    { className: 'container', style: styles.cardWidth },
+	    _react2.default.createElement(
+	      _Tabs.Tabs,
+	      null,
+	      _react2.default.createElement(
+	        _Tabs.Tab,
+	        { label: 'Tab A', value: 'a', style: styles.default_tab },
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'h2',
+	            { style: styles.headline },
+	            'Controllable Tab A'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Tabs are also controllable if you want to programmatically pass them their values. This allows for more functionality in Tabs such as not having any Tab selected or assigning them different values.'
+	          )
+	        )
+	      ),
+	      _react2.default.createElement(
+	        _Tabs.Tab,
+	        { label: 'Tab B', value: 'b', style: styles.default_tab },
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'h2',
+	            { style: styles.headline },
+	            'Controllable Tab B'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'This is another example of a controllable tab. Remember, if you use controllable Tabs, you need to give all of your tabs values or else you wont be able to select them.'
+	          )
+	        )
+	      )
+	    )
+	  );
+	};
+
+	RubyForm.propTypes = {
+	  handleChange: _react.PropTypes.func.isRequired,
+	  value: _react.PropTypes.string.isRequired
+
+	};
+	exports.default = RubyForm;
+
+/***/ }),
+/* 499 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _ReactForm = __webpack_require__(500);
+
+	var _ReactForm2 = _interopRequireDefault(_ReactForm);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ReactPage = function (_React$Component) {
+	  _inherits(ReactPage, _React$Component);
+
+	  /**
+	   * Class constructor.
+	   */
+	  function ReactPage(props) {
+	    _classCallCheck(this, ReactPage);
+
+	    var _this = _possibleConstructorReturn(this, (ReactPage.__proto__ || Object.getPrototypeOf(ReactPage)).call(this, props));
+
+	    _this.state = {
+	      value: 'a'
+	    };
+	    return _this;
+	  }
+
+	  _createClass(ReactPage, [{
+	    key: 'handleChange',
+	    value: function handleChange(value) {
+	      this.setState({
+	        value: value
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(_ReactForm2.default, {
+	        handleChange: this.handleChange,
+	        value: this.state.value
+	      });
+	    }
+	  }]);
+
+	  return ReactPage;
+	}(_react2.default.Component);
+
+	exports.default = ReactPage;
+
+/***/ }),
+/* 500 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.Colors = undefined;
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Card = __webpack_require__(478);
+
+	var _Tabs = __webpack_require__(492);
+
+	var _colors = __webpack_require__(247);
+
+	var _Paper = __webpack_require__(443);
+
+	var _Paper2 = _interopRequireDefault(_Paper);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Colors = exports.Colors = {
+	  blue: '#034FC6',
+	  white: '#fff',
+	  grey: '#2A2F33',
+	  greyLight: '#45505a'
+	};
+	var styles = {
+	  cardWidth: {
+	    width: "100%"
+	  },
+	  headline: {
+	    fontSize: 24,
+	    paddingTop: 16,
+	    marginBottom: 12,
+	    fontWeight: 400
+	  },
+	  default_tab: {
+	    color: Colors.blue,
+	    backgroundColor: Colors.white,
+	    fontWeight: 400
+	  }
+
+	};
+
+	var ReactForm = function ReactForm(handleChange, value) {
+	  return _react2.default.createElement(
+	    _Card.Card,
+	    { className: 'container', style: styles.cardWidth },
+	    _react2.default.createElement(
+	      _Tabs.Tabs,
+	      null,
+	      _react2.default.createElement(
+	        _Tabs.Tab,
+	        { label: 'Tab A', value: 'a', style: styles.default_tab },
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'h2',
+	            { style: styles.headline },
+	            'Controllable Tab A'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Tabs are also controllable if you want to programmatically pass them their values. This allows for more functionality in Tabs such as not having any Tab selected or assigning them different values.'
+	          )
+	        )
+	      ),
+	      _react2.default.createElement(
+	        _Tabs.Tab,
+	        { label: 'Tab B', value: 'b', style: styles.default_tab },
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'h2',
+	            { style: styles.headline },
+	            'Controllable Tab B'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'This is another example of a controllable tab. Remember, if you use controllable Tabs, you need to give all of your tabs values or else you wont be able to select them.'
+	          )
+	        )
+	      )
+	    )
+	  );
+	};
+
+	ReactForm.propTypes = {
+	  handleChange: _react.PropTypes.func.isRequired,
+	  value: _react.PropTypes.string.isRequired
+
+	};
+	exports.default = ReactForm;
 
 /***/ })
 /******/ ]);

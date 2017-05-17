@@ -9,15 +9,25 @@ class ReactPage extends React.Component {
    */
   constructor(props) {
     super(props);
-
     this.state = {
-     
+      value: 'a',
     };
   }
 
+  handleChange(value){
+    this.setState({
+      value: value,
+    });
+  };
+
 
   render() {
-    return (<ReactForm />);
+    return (  
+      <ReactForm 
+        handleChange={this.handleChange}
+        value={this.state.value}
+      />
+  );
   }
 
 }

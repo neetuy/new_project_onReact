@@ -87,3 +87,7 @@ ul{
 .footer{
   height: 100px;
 }
+
+.tabs{
+      backgroundColor: Colors.teal200
+    },
