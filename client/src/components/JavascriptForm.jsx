@@ -26,6 +26,7 @@ const styleSheet = createStyleSheet('BasicTabs', (theme) => ({
     padding: 16,
     textAlign: 'left',
     color: theme.palette.text.secondary,
+    boxShadow:'none',
   },
 }));
 

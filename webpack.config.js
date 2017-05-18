@@ -10,7 +10,9 @@ module.exports = {
     path: path.join(__dirname, '/client/dist/js'),
     filename: 'app.js',
   },
-
+  devServer: {
+    historyApiFallback: true,
+   },
   module: {
 
     // apply loaders to files that meet given conditions

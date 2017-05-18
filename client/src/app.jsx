@@ -1,14 +1,9 @@
-
-
-
 import React from 'react';
 import ReactDom from 'react-dom';
-import injectTapEventPlugin from 'react-tap-event-plugin';
-// // import getMuiTheme from 'material-ui/styles/getMuiTheme';
-// import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
-import { browserHistory, Router } from 'react-router';
 import routes from './routes.js';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
+import {Router, Route, Link, browserHistory, IndexRoute} from 'react-router';
 import createPalette from 'material-ui/styles/palette';
 import { purple, green, red } from 'material-ui/styles/colors';
 
