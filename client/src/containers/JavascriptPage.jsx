@@ -12,20 +12,19 @@ class JavascriptPage extends React.Component {
     this.state = {
       index: 0,
     };
-    this.handleChange = this.handleChange.bind();
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  
-
-   handleChange(event, index){
+  handleChange(event, index){
     this.setState({ index });
   }
+
 
   render() {
     return (  
       <JavascriptForm 
-        handleChange={this.handleChange}
-        index={this.state.index}
+       handleChange={this.handleChange}
+       index={this.state.index}
       />
   );
   }

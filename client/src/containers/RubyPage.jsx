@@ -10,22 +10,21 @@ class RubyPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: 'a',
+      index: 0,
     };
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(value){
-    this.setState({
-      value: value,
-    });
-  };
+  handleChange(event, index){
+    this.setState({ index });
+  }
 
 
   render() {
     return (  
       <RubyForm 
         handleChange={this.handleChange}
-        value={this.state.value}
+        index={this.state.index}
       />
   );
   }

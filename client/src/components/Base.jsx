@@ -33,6 +33,7 @@ const Base = ({ children, classes }) => (
       <div className={classes.root}>
       <AppBar className={classes.appBar}>
         <Toolbar>
+          <Button contrast  className={classes.button} ><Link to="/"> Home</Link></Button>
           <Button contrast  className={classes.button} ><Link to="j_page"> javascript</Link></Button>
           <Button contrast className={classes.button}><Link to="react_page"> React</Link></Button>
           <Button contrast className={classes.button}><Link to="r_page">Ruby</Link></Button>
@@ -50,7 +51,5 @@ Base.propTypes = {
   children: PropTypes.object.isRequired,
   classes:PropTypes.object.isRequired
 };
-
-// export default Base;
 export default withStyles(styleSheet)(Base);
 

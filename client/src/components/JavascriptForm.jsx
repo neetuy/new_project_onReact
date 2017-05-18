@@ -1,16 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles, createStyleSheet } from 'material-ui/styles';
-import Card, { CardActions, CardContent } from 'material-ui/Card';
-import Button from 'material-ui/Button';
-import Typography from 'material-ui/Typography';
-import Paper from 'material-ui/Paper';
-import Grid from 'material-ui/Grid';
-import Tabs, { Tab } from 'material-ui/Tabs';
 
-const TabContainer = (children) => (
+import React, { PropTypes } from 'react';
+import { withStyles, createStyleSheet } from 'material-ui/styles';
+import Paper from 'material-ui/Paper';
+import Tabs, { Tab } from 'material-ui/Tabs';
+import Grid from 'material-ui/Grid';
+
+
+const TabContainer = (props) => (
   <div style={{ padding: 20 }}>
-    {children}
+    {props.children}
   </div>
 );
 
@@ -18,68 +16,57 @@ TabContainer.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-
-
-const styleSheet = createStyleSheet('JavascriptForm', (theme) => ({
-  card: {
-    minWidth: 275,
-  },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
-  },
-   root: {
+const styleSheet = createStyleSheet('BasicTabs', (theme) => ({
+  root: {
     flexGrow: 1,
     marginTop: 30,
+    height:'100%'
   },
-  paper: {
+    paper: {
     padding: 16,
-    textAlign: 'center',
+    textAlign: 'left',
     color: theme.palette.text.secondary,
   },
-
- 
 }));
 
-function JavascriptForm(handleChange, classes,index) {
+class javascriptForm extends React.Component {
   
-  const bull = <span className={classes.bullet}>&bull;</span>;
+  render() {
+    const classes = this.props.classes;
+    const handleChange = this.props.handleChange;
+    const index = this.props.index;
 
-  return (
-    <Card>
+    return (
       <div className={classes.root}>
         <Grid container gutter={24}>
-          <Grid item xs={12} sm={8}>
+          <Grid item xs={8} >
             <Paper className={classes.paper}>
-            <Tabs index={index} handleChange={handleChange}>
-            <Tab label="Item One" />
-            <Tab label="Item Two" />
-            <Tab label="Item Three" />
-          </Tabs>
-          {index === 0 && <TabContainer>{'Item One'}</TabContainer>}
-          {index === 1 && <TabContainer>{'Item Two'}</TabContainer>}
-          {index === 2 && <TabContainer>{'Item Three'}</TabContainer>}
+            <Tabs index={index} onChange={handleChange}>
+              <Tab label="Item One" />
+              <Tab label="Item Two" />
+              <Tab label="Item Three" />
+            </Tabs>
+              {index === 0 && <TabContainer>{'Item One'}</TabContainer>}
+              {index === 1 && <TabContainer>{'Item Two'}</TabContainer>}
+              {index === 2 && <TabContainer>{'Item Three'}</TabContainer>}
             </Paper>
           </Grid>
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={4} >
             <Paper className={classes.paper}>
-              
+            rrjhgljk
             </Paper>
           </Grid>
-          
+
         </Grid>
-      </div>
-    </Card>
-  );
+      </div>  
+    );
+  }
 }
 
-JavascriptForm.propTypes = {
-  handleChange: PropTypes.func.isRequired,
+javascriptForm.propTypes = {
   classes: PropTypes.object.isRequired,
-  index: PropTypes.object.isRequired,
+  handleChange:PropTypes.func.isRequired,
+  index:PropTypes.number.isRequired
 };
 
-
-
-export default withStyles(styleSheet)(JavascriptForm);
+export default withStyles(styleSheet)(javascriptForm);

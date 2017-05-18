@@ -7,25 +7,24 @@ class ReactPage extends React.Component {
   /**
    * Class constructor.
    */
-  constructor(props) {
+ constructor(props) {
     super(props);
     this.state = {
-      value: 'a',
+      index: 0,
     };
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(value){
-    this.setState({
-      value: value,
-    });
-  };
+  handleChange(event, index){
+    this.setState({ index });
+  }
 
 
   render() {
     return (  
       <ReactForm 
         handleChange={this.handleChange}
-        value={this.state.value}
+        index={this.state.index}
       />
   );
   }
