@@ -37,10 +37,12 @@ const styleSheet = createStyleSheet('Base', (theme) => ({
     boxShadow:'none',
     backgroundColor:'#3f51b5',
   },
-
   menuList:{
     top: 80,
     left: 1186.656,
+  },
+  textColor:{
+    color:'#00bcd4',
   }
 }));
 
@@ -98,7 +100,8 @@ class Base extends React.Component {
               <Button contrast className={classes.button}><Link to="r_page">Ruby</Link></Button>
           </Paper>
           </Grid>
-          <Grid item xs={4} >
+         
+          <Grid  item xs={2} >
             <Paper className={classes.paperLeft} > 
             <List>
               <ListItem
@@ -109,7 +112,7 @@ class Base extends React.Component {
                 onClick={this.handleClickListItem}
               >
                 <ListItemText
-                    
+                  className={classes.textColor}
                   secondary={options[this.state.selectedIndex]}
                 />
               </ListItem>
