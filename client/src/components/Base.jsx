@@ -11,6 +11,12 @@ import Menu, { MenuItem, MenuIcon } from 'material-ui/Menu';
 import Paper from 'material-ui/Paper';
 import Grid from 'material-ui/Grid';
 import List, { ListItem, ListItemText } from 'material-ui/List';
+import Hidden from 'material-ui/Hidden';
+import Avatar from 'material-ui/Avatar';
+import FolderIcon from 'material-ui-icons/Folder';
+import PageviewIcon from 'material-ui-icons/Pageview';
+import AssignmentIcon from 'material-ui-icons/Assignment';
+
 
 const styleSheet = createStyleSheet('Base', (theme) => ({
   root: {    
@@ -23,27 +29,40 @@ const styleSheet = createStyleSheet('Base', (theme) => ({
   //   flex: 1,
   // },
   button:{
-    margin: theme.spacing.unit,
+    // margin: theme.spacing.unit,
   },
   
-  
     paper: {
+    padding:10,
     textAlign: 'left',
     boxShadow:'none',
     backgroundColor:'#3f51b5',
   },
-   paperLeft: {
+   paperRight: {
     textAlign: 'right',
     boxShadow:'none',
     backgroundColor:'#3f51b5',
   },
-  menuList:{
-    top: 80,
-    left: 1186.656,
+
+  navLink: {
+    padding:10,
   },
-  textColor:{
-    color:'#00bcd4',
-  }
+  offset2:{
+    marginLeft:'16.6%',
+  },
+  listPadding:{
+    padding:8,
+  },
+  
+  menu:{
+    padding:0,
+  },
+ typography: {
+   
+    left: 0,
+    top: 0,
+    padding: 8,
+  },
 }));
 
 
@@ -91,21 +110,27 @@ class Base extends React.Component {
       <div>
       <AppBar className={classes.appBar}>
         <Toolbar>
-        <Grid container gutter={24}>
-          <Grid  item xs={8} >
+        <Grid container gutter={8}>
+          <Grid  hidden={{ smUp: true }} item sm >
             <Paper className={classes.paper}>
-              <Button contrast  className={classes.button} ><Link to="/"> Home</Link></Button>
-              <Button contrast  className={classes.button} ><Link to="j_page"> javascript</Link></Button>
-              <Button contrast className={classes.button}><Link to="react_page"> React</Link></Button>
-              <Button contrast className={classes.button}><Link to="r_page">Ruby</Link></Button>
-          </Paper>
+              <Link>&#9776;</Link> 
+            </Paper>
           </Grid>
-         
-          <Grid  item xs={2} >
-            <Paper className={classes.paperLeft} > 
-            <List>
+          <Grid  hidden={{ smDown: true }} item sm={8} >
+            <Paper className={classes.paper}>
+              <Typography  className={classes.typography}>
+                <Link to="/" className={classes.navLink}> Home</Link>
+                <Link to="j_page"  className={classes.navLink}> javascript</Link>
+                <Link to="react_page"  className={classes.navLink}> React</Link>
+                <Link to="r_page"  className={classes.navLink}>Ruby</Link>
+              </Typography>
+            </Paper>
+          </Grid>
+          
+          <Grid item sm={2} className={classes.offset2} >
+            <Paper className={classes.paperRight} > 
+            <List className={classes.listPadding}>
               <ListItem
-
                 button
                 aria-haspopup="true"
                 aria-owns="simple-menu"
@@ -137,7 +162,9 @@ class Base extends React.Component {
           })}
             </Menu>
         </Paper>
+        
         </Grid>
+
         </Grid>
         </Toolbar>
       </AppBar>
