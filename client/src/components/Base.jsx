@@ -6,16 +6,17 @@ import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import IconButton from 'material-ui/IconButton';
-import DeleteIcon from 'material-ui-icons/Delete';
 import Menu, { MenuItem, MenuIcon } from 'material-ui/Menu';
 import Paper from 'material-ui/Paper';
 import Grid from 'material-ui/Grid';
 import List, { ListItem, ListItemText } from 'material-ui/List';
 import Hidden from 'material-ui/Hidden';
-import Avatar from 'material-ui/Avatar';
-import FolderIcon from 'material-ui-icons/Folder';
-import PageviewIcon from 'material-ui-icons/Pageview';
-import AssignmentIcon from 'material-ui-icons/Assignment';
+import CloseIcon from 'material-ui-icons/Close';
+import Slide from 'material-ui/transitions/Slide';
+import Dialog from 'material-ui/Dialog';
+import Divider from 'material-ui/Divider';
+import TextField from 'material-ui/TextField';
+
 
 
 const styleSheet = createStyleSheet('Base', (theme) => ({
@@ -63,13 +64,15 @@ const styleSheet = createStyleSheet('Base', (theme) => ({
     top: 0,
     padding: 8,
   },
+  textColor:{
+    color:"#00bcd4",
+  }
 }));
 
 
 const options = [
   'Refresh',
-  'Signin',
-  'Signup',
+  'SignIn',
 ];
 
 class Base extends React.Component {
@@ -98,6 +101,7 @@ class Base extends React.Component {
   };
   handleMenuItemClick(event, index){
     this.setState({ selectedIndex: index, open: false });
+
   };
 
   render() {
@@ -160,6 +164,9 @@ class Base extends React.Component {
               </MenuItem>
                );
           })}
+            <MenuItem>
+            <FullScreenDialog/>
+            </MenuItem>
             </Menu>
         </Paper>
         
@@ -182,3 +189,88 @@ Base.propTypes = {
 };
 
 export default withStyles(styleSheet)(Base);
+
+class FullScreenDialog extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+    open: false,
+  };
+  this.handleRequestClose = this.handleRequestClose.bind(this);
+  this.handleOpen = this.handleOpen.bind(this);
+  }
+  
+
+  handleRequestClose(){
+    this.setState({ open: false });
+  };
+
+  handleOpen(){
+    this.setState({ open: true });
+  };
+
+  render() {
+    
+    return (
+      <div>
+        <Button onClick={this.handleOpen}>
+          Signup
+        </Button>
+        <Dialog
+          fullScreen
+          open={this.state.open}
+          onRequestClose={this.handleRequestClose}
+          transition={<Slide direction="down" />}
+        >
+          <AppBar >
+            <Toolbar>
+              <IconButton contrast onClick={this.handleRequestClose}>
+                <CloseIcon />
+              </IconButton>
+              <Typography type="title" colorInherit >
+                close
+              </Typography>
+             
+            </Toolbar>
+          </AppBar>
+            <form >
+                <h2 className="card-heading">Sign Up</h2>
+                <div className="field-line">
+                  <TextField
+                   label="Name"
+                    name="name"
+                    
+                  />
+                </div>
+
+                <div className="field-line">
+                  <TextField
+                    label="Email"
+                    name="email"
+                   
+                  />
+                </div>
+
+                <div className="field-line">
+                  <TextField
+                    label="Password"
+                    type="password"
+                    
+                  />
+                </div>
+                <div className="button-line">
+                    <Button primary>
+                    Signup
+                  </Button>
+              </div>
+                 
+              </form>
+            
+        </Dialog>
+
+      </div>
+    );
+  }
+}
+
+
