@@ -30,7 +30,7 @@ const styleSheet = createStyleSheet('BasicTabs', (theme) => ({
   },
 }));
 
-class javascriptForm extends React.Component {
+class JavascriptForm extends React.Component {
   
   render() {
     const classes = this.props.classes;
@@ -64,10 +64,10 @@ class javascriptForm extends React.Component {
   }
 }
 
-javascriptForm.propTypes = {
+JavascriptForm.propTypes = {
   classes: PropTypes.object.isRequired,
   handleChange:PropTypes.func.isRequired,
   index:PropTypes.number.isRequired
 };
 
-export default withStyles(styleSheet)(javascriptForm);
+export default withStyles(styleSheet)(JavascriptForm);

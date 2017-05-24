@@ -1,3 +1,5 @@
+import SignUpDialog from './SignUpDialog.jsx';
+import SignInDialog from './SignInDialog.jsx';
 import React, { PropTypes } from 'react';
 import { Link, IndexLink } from 'react-router';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
@@ -57,6 +59,7 @@ const styleSheet = createStyleSheet('Base', (theme) => ({
   
   menu:{
     padding:0,
+
   },
  typography: {
    
@@ -66,13 +69,16 @@ const styleSheet = createStyleSheet('Base', (theme) => ({
   },
   textColor:{
     color:"#00bcd4",
+  },
+  dialogCustom:{
+    textTransform: 'none',
   }
 }));
 
 
 const options = [
   'Refresh',
-  'SignIn',
+  
 ];
 
 class Base extends React.Component {
@@ -83,7 +89,7 @@ class Base extends React.Component {
       anchorEl: undefined,
       open: false,
       button : undefined,
-      selectedIndex: 1,
+      selectedIndex: 0,
     };
     this.handleClickListItem = this.handleClickListItem.bind(this);
     this.handleRequestClose = this.handleRequestClose.bind(this);
@@ -124,7 +130,7 @@ class Base extends React.Component {
             <Paper className={classes.paper}>
               <Typography  className={classes.typography}>
                 <Link to="/" className={classes.navLink}> Home</Link>
-                <Link to="j_page"  className={classes.navLink}> javascript</Link>
+                <Link to="j_page"  className={classes.navLink}> Javascript</Link>
                 <Link to="react_page"  className={classes.navLink}> React</Link>
                 <Link to="r_page"  className={classes.navLink}>Ruby</Link>
               </Typography>
@@ -142,7 +148,7 @@ class Base extends React.Component {
               >
                 <ListItemText
                   className={classes.textColor}
-                  secondary={options[this.state.selectedIndex]}
+                  secondary="Refresh"
                 />
               </ListItem>
             </List>
@@ -153,19 +159,16 @@ class Base extends React.Component {
               open={this.state.open}
               onRequestClose={this.handleRequestClose}
             >
-            {options.map((option, index) => {
-            return (
-              <MenuItem 
-                key={option}
-                selected={index === this.state.selectedIndex}
-                onClick={(event) => this.handleMenuItemClick(event, index)}
-              >
-              {option}
-              </MenuItem>
-               );
-          })}
+            <MenuItem>Refresh</MenuItem>
             <MenuItem>
-            <FullScreenDialog/>
+            <SignUpDialog
+            className={classes.dialogCustom}
+            />
+            </MenuItem>
+            <MenuItem>
+            <SignInDialog
+            className={classes.dialogCustom}
+            />
             </MenuItem>
             </Menu>
         </Paper>
@@ -190,87 +193,7 @@ Base.propTypes = {
 
 export default withStyles(styleSheet)(Base);
 
-class FullScreenDialog extends React.Component {
-  constructor(){
-    super();
-    this.state = {
-    open: false,
-  };
-  this.handleRequestClose = this.handleRequestClose.bind(this);
-  this.handleOpen = this.handleOpen.bind(this);
-  }
-  
 
-  handleRequestClose(){
-    this.setState({ open: false });
-  };
 
-  handleOpen(){
-    this.setState({ open: true });
-  };
-
-  render() {
-    
-    return (
-      <div>
-        <Button onClick={this.handleOpen}>
-          Signup
-        </Button>
-        <Dialog
-          fullScreen
-          open={this.state.open}
-          onRequestClose={this.handleRequestClose}
-          transition={<Slide direction="down" />}
-        >
-          <AppBar >
-            <Toolbar>
-              <IconButton contrast onClick={this.handleRequestClose}>
-                <CloseIcon />
-              </IconButton>
-              <Typography type="title" colorInherit >
-                close
-              </Typography>
-             
-            </Toolbar>
-          </AppBar>
-            <form >
-                <h2 className="card-heading">Sign Up</h2>
-                <div className="field-line">
-                  <TextField
-                   label="Name"
-                    name="name"
-                    
-                  />
-                </div>
-
-                <div className="field-line">
-                  <TextField
-                    label="Email"
-                    name="email"
-                   
-                  />
-                </div>
-
-                <div className="field-line">
-                  <TextField
-                    label="Password"
-                    type="password"
-                    
-                  />
-                </div>
-                <div className="button-line">
-                    <Button primary>
-                    Signup
-                  </Button>
-              </div>
-                 
-              </form>
-            
-        </Dialog>
-
-      </div>
-    );
-  }
-}
 
 
